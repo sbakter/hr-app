@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import EmployeeList from './components/EmployeeList';
 import './App.css';
+import Button from './components/Button';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -9,12 +10,12 @@ function App() {
     <div className="app">
       <div className="header">
         <h1>Employee Directory</h1>
-        <button 
+        <Button 
           onClick={() => setIsLoggedIn(!isLoggedIn)}
-          className="login-button"
+          variant={isLoggedIn ? 'danger' : 'success'}
         >
           {isLoggedIn ? 'Log Out' : 'Log In'}
-        </button>
+        </Button>
       </div>
       
       {isLoggedIn ? (

@@ -1,7 +1,7 @@
 # HR Management App
 
 ## Description
-Enhanced with login, tenure tracking, and status reminders.
+Enhanced with editing and code improvements.
 
 
 ## Installation
@@ -23,12 +23,12 @@ Enhanced with login, tenure tracking, and status reminders.
    ```
 
 ## New Features
-- Login/logout functionality
-- Employee start dates and tenure calculation
-- Probation period reminders
-- Work anniversary highlights
-- Department information
-- Enhanced styling
+- Reusable Button component with variants
+- Employee editing functionality
+- Department-based color coding
+- Prop-type validation
+- CSS variables for theming
+- Proper component destructuring
 
 ## License
 This project is licensed under the MIT License.

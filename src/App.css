@@ -10,10 +10,11 @@
 }
 
 .employee-card {
-  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--secondary);
+  transition: all 0.2s ease;
 }
 
 .employee-card button {
@@ -75,4 +76,27 @@
 
 .employee-card.probation {
   border: 2px solid #dc3545;
+}
+
+.employee-card.border-blue-500 { border-color: var(--engineering); }
+.employee-card.border-green-500 { border-color: var(--creative); }
+.employee-card.border-purple-500 { border-color: var(--leadership); }
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-form select, 
+.edit-form input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
