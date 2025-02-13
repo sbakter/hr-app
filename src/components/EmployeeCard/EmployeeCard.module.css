@@ -1,0 +1,72 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.department {
+  border-left: 4px solid;
+  padding-left: 1rem;
+}
+
+.engineering {
+  border-color: var(--engineering);
+}
+
+.creative {
+  border-color: var(--creative);
+}
+
+.leadership {
+  border-color: var(--leadership);
+}
+
+.reminder {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.probation {
+  background-color: #ffe6e6;
+  border-left: 4px solid var(--danger);
+}
+
+.anniversary {
+  background-color: #fff3cd;
+  border-left: 4px solid var(--success);
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.editForm input,
+.editForm select {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* In EmployeeCard.module.css */
+.title {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--primary);
+}
+.marginRight {
+  margin-right: 5px;
+}

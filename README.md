@@ -23,10 +23,14 @@ Enhanced with editing and code improvements.
    ```
 
 ## New Features
-- Use `json-server` to create a mock backend and store employee data in `db.json`.
-- Fetch the employee list from the backend instead of using a static array.
-- Add functionality to create, edit, and fetch employee data dynamically.
-- Add a detailed view page for each employee.
+- Full CRUD operations with a mock backend
+- Custom hooks for reusable logic
+- CSS Modules for scoped styling
+- Organized project structure
+- Proper error handling and loading states
+- Consistent theming with CSS variables
+
+
 
 
 ## License
