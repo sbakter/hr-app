@@ -28,3 +28,51 @@
 .employee-card button:hover {
   background-color: #0056b3;
 }
+/* Add these new styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  background-color: #28a745;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.login-button:hover {
+  background-color: #218838;
+}
+
+.login-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.reminder {
+  padding: 8px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.probation-reminder {
+  background-color: #ffe6e6;
+  border-left: 4px solid #dc3545;
+  color: #dc3545;
+}
+
+.anniversary-reminder {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+}
+
+.employee-card.probation {
+  border: 2px solid #dc3545;
+}

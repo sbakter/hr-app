@@ -1,7 +1,8 @@
 # HR Management App
 
 ## Description
-This is a simple HR management app built using React. It allows users to view and manage employee details, including promoting or demoting employees.
+Enhanced with login, tenure tracking, and status reminders.
+
 
 ## Installation
 1. Clone the repository:
@@ -21,10 +22,13 @@ This is a simple HR management app built using React. It allows users to view an
    npm run dev
    ```
 
-## Features
-- View a list of employees.
-- Promote or demote employees dynamically.
-- Simple UI with basic CSS.
+## New Features
+- Login/logout functionality
+- Employee start dates and tenure calculation
+- Probation period reminders
+- Work anniversary highlights
+- Department information
+- Enhanced styling
 
 ## License
 This project is licensed under the MIT License.
