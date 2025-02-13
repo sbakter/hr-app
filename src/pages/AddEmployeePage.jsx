@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
+import { createEmployee } from '../api/employees';
 
-export default function AddEmployeePage({ onSubmit }) {
+export default function AddEmployeePage() {
   const [formData, setFormData] = useState({
     name: '',
     role: 'Developer',
@@ -14,11 +15,11 @@ export default function AddEmployeePage({ onSubmit }) {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit({
+    await createEmployee({
       ...formData,
-      id: Date.now()
+      id: "" + Date.now()
     });
     navigate('/employees');
   };
@@ -33,7 +34,7 @@ export default function AddEmployeePage({ onSubmit }) {
           <input
             type="text"
             value={formData.name}
-            onChange={(e) => setFormData({...formData, name: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
           />
         </div>

@@ -5,62 +5,16 @@ import './App.css';
 import LoginPage from './pages/LoginPage';
 import EmployeeListPage from './pages/EmployeeListPage';
 import AddEmployeePage from './pages/AddEmployeePage';
+import EmployeeDetail from './pages/EmployeeDetail';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [employees, setEmployees] = useState([
-    {
-      id: 1,
-      name: 'John Doe',
-      role: 'Developer',
-      department: 'Engineering',
-      startDate: '2023-03-15',
-      probationPeriod: 3,
-      location: 'New York',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      role: 'Designer',
-      department: 'Creative',
-      startDate: '2020-05-20',
-      probationPeriod: 3,
-      location: 'New York',
-    },
-    {
-      id: 3,
-      name: 'Mike Johnson',
-      role: 'Manager',
-      department: 'Leadership',
-      startDate: '2024-01-10',
-      probationPeriod: 3,
-      location: 'New York',
-    }
-  ]);
 
 
   const handleLogin = () => setIsLoggedIn(true);
   const handleLogout = () => setIsLoggedIn(false);
 
-  const handleAddEmployee = (newEmployee) => {
-    setEmployees([...employees, newEmployee]);
-  };
-  const handleEdit = (id, newData) => {
-    setEmployees(employees.map(emp =>
-      emp.id === id ? { ...emp, ...newData } : emp
-    ));
-  };
-
-  const handlePromote = (employeeId) => {
-    setEmployees(employees.map(emp =>
-      emp.id === employeeId ? {
-        ...emp,
-        role: emp.role.startsWith('Senior')
-          ? emp.role.replace('Senior ', '')
-          : `Senior ${emp.role}`
-      } : emp
-    ));
-  };
+ 
 
   return (
     <BrowserRouter>
@@ -83,15 +37,17 @@ export default function App() {
         <Route path="/employees" element={
           isLoggedIn ? (
             <EmployeeListPage
-              employees={employees}
-              onPromote={handlePromote}
-              onEdit={handleEdit}
             />
           ) : <Navigate to="/login" replace />
         } />
         <Route path="/add" element={
           isLoggedIn ? (
-            <AddEmployeePage onSubmit={handleAddEmployee} />
+            <AddEmployeePage/>
+          ) : <Navigate to="/login" replace />
+        } />
+         <Route path="/employee/:id" element={
+          isLoggedIn ? (
+            <EmployeeDetail/>
           ) : <Navigate to="/login" replace />
         } />
       </Routes>

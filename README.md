@@ -23,12 +23,11 @@ Enhanced with editing and code improvements.
    ```
 
 ## New Features
-- Multi-page navigation using React Router
-- Protected routes requiring login
-- Dedicated login page
-- Add employee form page
-- Navigation bar with dynamic links
-- Form validation and error handling
+- Use `json-server` to create a mock backend and store employee data in `db.json`.
+- Fetch the employee list from the backend instead of using a static array.
+- Add functionality to create, edit, and fetch employee data dynamically.
+- Add a detailed view page for each employee.
+
 
 ## License
 This project is licensed under the MIT License.

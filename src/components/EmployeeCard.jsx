@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
-export default function EmployeeCard({  
-  employee, 
-  onPromote, 
+export default function EmployeeCard({
+  employee,
+  onPromote,
   onEdit,
-  departments  }) {
+  onDelete,
+  departments,
+  onAdd
+}) {
   const departmentColors = {
     Engineering: 'border-blue-500',
     Creative: 'border-green-500',
@@ -19,7 +23,9 @@ export default function EmployeeCard({
     onEdit(employee.id, editedData);
     setEditing(false);
   };
-
+  const handleDelete = () => {
+    onDelete(employee.id);
+  };
   const calculateYearsWorked = () => {
     const start = new Date(employee.startDate);
     const today = new Date();
@@ -65,11 +71,17 @@ export default function EmployeeCard({
             </div>
           )}
           <div className="button-group">
+            <Link to={`/employee/${employee.id}`}>
+              <Button variant="success">Details</Button>
+            </Link>
             <Button variant="secondary" onClick={() => setEditing(true)}>
               Edit
             </Button>
+            <Button variant="danger" onClick={handleDelete}>
+              Delete
+            </Button>
             <Button
-              onClick={onPromote}
+              onClick={() => onPromote(employee.id, employee)}
               variant={employee.role.startsWith('Senior') ? 'danger' : 'success'}
             >
               {employee.role.startsWith('Senior') ? 'Demote' : 'Promote'}
