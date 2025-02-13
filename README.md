@@ -23,12 +23,12 @@ Enhanced with editing and code improvements.
    ```
 
 ## New Features
-- Reusable Button component with variants
-- Employee editing functionality
-- Department-based color coding
-- Prop-type validation
-- CSS variables for theming
-- Proper component destructuring
+- Multi-page navigation using React Router
+- Protected routes requiring login
+- Dedicated login page
+- Add employee form page
+- Navigation bar with dynamic links
+- Form validation and error handling
 
 ## License
 This project is licensed under the MIT License.
